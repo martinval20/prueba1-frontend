@@ -1,12 +1,26 @@
-.card {
+.card-title{
   display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  text-align: center;
+  margin: -4px;
+  border: 1px solid #212121;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.card {
+  display: flexbox;
   grid-template-columns: 3;
   gap: 10px;
   justify-content: center;
   align-items: center;
   padding: 10px;
   text-align: center;
-  margin: 30px;
-  border: 1px solid #ff8000;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  border: 1px solid #212121;
   background-color: whitesmoke;
+  border-radius: 10px;
 }

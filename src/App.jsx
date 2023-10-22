@@ -1,13 +1,13 @@
 import ColorList from "./components/ColorList";
-
+import "./Sass/ColorListComponent.scss"
 
 function App() {
   
   return (
-    <div className="card">
-      <h1 className="text-center">Colores</h1>
+    <div >
+      <h1 className="card-title">Colores</h1>
       <ColorList/>
-<div>Anterior</div> <div>Siguiente</div>
+<p>Anterior</p> <p>Siguiente</p>
     </div>
   );
 }

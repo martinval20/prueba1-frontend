@@ -1,10 +1,12 @@
 import React from "react";
-import "../Sass/ColorListComponent.scss"
 
-export default function Color({colors}) {
+export default function Color({ colors }) {
   return (
     <div className="card">
-      {colors.year} {colors.name} {colors.color} {colors.pantone_value}
+      <p className="year">{colors.year} </p>
+      <p className="colorName">{colors.name}</p>
+      <p className="colorCode">{colors.color} </p>
+      <p className="colorPatone">{colors.pantone_value}</p>
     </div>
   );
 }
