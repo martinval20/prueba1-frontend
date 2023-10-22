@@ -7,7 +7,7 @@ function App() {
     <div className="card">
       <h1 className="text-center">Colores</h1>
       <ColorList/>
-
+<div>Anterior</div> <div>Siguiente</div>
     </div>
   );
 }

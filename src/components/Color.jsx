@@ -1,4 +1,5 @@
 import React from "react";
+import "../Sass/ColorListComponent.scss"
 
 export default function Color({colors}) {
   return (
