@@ -67,9 +67,60 @@
       font-size: 16px;
       font-weight: 400;
       position: absolute;
-      width: 98%;
       bottom: -10px;
-      left: 425px;
+      right: 10px;
+    }
+  }
+  .card2 {
+    border: 1px solid #212121;
+    border-radius: 10px;
+    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+    height: 600px;
+    width: 100%; /* Para crear 3 columnas con espacio entre ellas */
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    .year {
+      font-family: system-ui;
+      font-size: 16px;
+      font-weight: 400;
+      position: absolute;
+      width: 99%;
+      top: -16px;
+    }
+    .colorName {
+      font-family: system-ui;
+      font-size: 15px;
+      position: absolute;
+      top: 50%;
+      font-weight: 400;
+    }
+    .colorCode {
+      margin-top: -15px;
+      font-family: system-ui;
+      position: absolute;
+      top: 50%;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .colorPatone {
+      font-family: system-ui;
+      font-size: 16px;
+      font-weight: 400;
+      position: absolute;
+      bottom: -15px;
+      right: 7px;
+    }
+    .copiado {
+      font-family: system-ui;
+      font-size: 50px;
+      position: absolute;
+      top: 200px;
+      font-weight: 400;
     }
   }
 }
