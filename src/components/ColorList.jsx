@@ -4,6 +4,7 @@ import Color from "./Color";
 
 function ColorList() {
   const [colors, setColors] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -13,6 +14,12 @@ function ColorList() {
     }
     fetchData();
   }, []);
+
+  if(loading){
+    return(
+        <div>Cargando</div>
+    )
+  }
   return (
     <div className="container">
       {colors.map((colors) => {

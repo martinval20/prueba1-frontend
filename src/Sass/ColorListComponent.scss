@@ -60,13 +60,22 @@
       font-weight: 400;
     }
   }
-  .mover {
+  .btn-nav {
     margin-top: 1px;
     height: 30px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     border: 1px solid #212121;
     border-radius: 10px;
+    .btn-atras{
+      border: none;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+    .btn-siguiente{
+      border: none;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
   }
 }
