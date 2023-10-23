@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Color from "./Color";
+import Loader from "./common/Loader/Loader";
 
 function ColorList() {
   const [colors, setColors] = useState([]);
@@ -10,22 +11,18 @@ function ColorList() {
     async function fetchData() {
       const response = await fetch("https://reqres.in/api/colors");
       const data = await response.json();
+      setLoading(false);
       setColors(data.data);
     }
     fetchData();
   }, []);
 
-  if(loading){
-    return(
-        <div>Cargando</div>
-    )
-  }
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="container">
       {colors.map((colors) => {
-        return (
-          <Color key={colors.id} colors={colors}/>
-        );
+        return <Color key={colors.id} colors={colors} />;
       })}
     </div>
   );
