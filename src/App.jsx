@@ -1,14 +1,11 @@
 import ColorList from "./components/ColorList";
-import "./Sass/ColorListComponent.scss"
-
+import "./Sass/ColorListComponent.scss";
+import Topbar from "./components/common/Topbar/Topbar";
 function App() {
-  
   return (
     <div className="card-main">
-      <div className="card-title">Colores</div>
-      <ColorList/>
-      
-
+      <Topbar />
+      <ColorList />
     </div>
   );
 }

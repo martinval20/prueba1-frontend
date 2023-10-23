@@ -1,25 +1,23 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Color from "./Color";
 import Loader from "./common/Loader/Loader";
+import NavButton from "./common/NavButton/NavButton";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-function NavPage(props) {
-  return (
-    <div className="btn-nav">
-      <button className="btn-atras" disabled={props.page==1} onClick={() => props.setPage(1)}>
-        {" "}
-        &lt; Anterior
-      </button>
-      <button className="btn-siguiente" disabled={props.page==2} onClick={() => props.setPage(2)}>
-        Siguiente &gt;
-      </button>
-    </div>
-  );
-}
 function ColorList() {
   const [colors, setColors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
+  const [isCopied, setisCopied] = useState(false);
+  const [colorColor, setColorColor] = useState("");
+
+  function colorSelected(colors) {
+    const colorCopy = colors.color;
+    setColorColor(colorCopy);
+    setisCopied(!isCopied);
+    console.log(colorCopy);
+    console.log("hola");
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -31,16 +29,44 @@ function ColorList() {
     fetchData();
   }, [page]);
 
-  return loading ? (
-    <Loader />
+  return isCopied ? (
+    <div>
+      <div className="container">
+        {colors
+          .map((colors) => {
+            return (
+              <CopyToClipboard text={colorColor}>
+                <div onClick={() => colorSelected(colors)} className="card">
+                  <p className="year">{colors.year} </p>
+                  <p className="colorName">{colors.name}</p>
+                  <p className="colorCode">{colors.color} </p>
+                  <p className="colorPatone">{colors.pantone_value}</p>
+                </div>
+              </CopyToClipboard>
+            );
+          })}
+      </div>
+      <NavButton page={page} setPage={setPage} />
+    </div>
   ) : (
     <div>
       <div className="container">
-        {colors.map((colors) => {
-          return <Color key={colors.id} colors={colors} />;
-        })}
+        {colors
+          .filter((colors) => colors.color === `${colorColor}`)
+          .map((colors) => {
+            return (
+              <CopyToClipboard text={colorColor}>
+                <div onClick={() => colorSelected(colors)} className="card">
+                  <p className="year">{colors.year} </p>
+                  <p className="colorName">{colors.name}</p>
+                  <p className="colorCode">{colors.color} </p>
+                  <p className="colorPatone">{colors.pantone_value}</p>
+                </div>
+              </CopyToClipboard>
+            );
+          })}
       </div>
-      <NavPage page={page} setPage={setPage}/>
+      <NavButton page={page} setPage={setPage} />
     </div>
   );
 }
