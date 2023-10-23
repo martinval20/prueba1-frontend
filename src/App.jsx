@@ -4,10 +4,11 @@ import "./Sass/ColorListComponent.scss"
 function App() {
   
   return (
-    <div >
-      <h1 className="card-title">Colores</h1>
+    <div className="card-main">
+      <div className="card-title">Colores</div>
       <ColorList/>
-<p>Anterior</p> <p>Siguiente</p>
+      <div className="mover"><p>Anterior</p> <p>Siguiente</p></div>
+
     </div>
   );
 }

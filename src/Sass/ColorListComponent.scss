@@ -1,26 +1,67 @@
-.card-title{
+.card-main {
   display: grid;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  padding: 2px;
-  text-align: center;
-  margin: -4px;
-  border: 1px solid #212121;
-  background-color: whitesmoke;
   border-radius: 10px;
-}
-.card {
-  display: flexbox;
-  grid-template-columns: 3;
-  gap: 10px;
-  justify-content: center;
+  gap: 5px;
   align-items: center;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: -5px;
-  border: 1px solid #212121;
-  background-color: whitesmoke;
-  border-radius: 10px;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    border: 1px solid #212121;
+    height: 100%;
+    width: auto;
+  }
+  .card-title {
+    border: 1px solid #212121;
+    height: 40px;
+    width: 100%;
+    font-size: 30px;
+    font-family: system-ui;
+    font-weight: 500;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .card {
+    border: 1px solid #212121;
+    border-radius: 10px;
+    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 400px;
+    cursor: pointer;
+    .year {
+      font-family: system-ui;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .colorName {
+      font-family: system-ui;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .colorCode {
+      margin-top: -15px;
+      font-family: system-ui;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .colorPatone {
+      margin-top: -15px;
+      font-family: system-ui;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  .mover{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #212121;
+  }
 }
