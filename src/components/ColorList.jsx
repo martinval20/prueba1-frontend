@@ -16,7 +16,6 @@ function ColorList() {
     const colorCopied = colors.color;
     setColorColor(colorCopied);
     copiado();
-    console.log(colorCopied);
   }
   useEffect(() => {
     async function fetchData() {
