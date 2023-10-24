@@ -7,6 +7,7 @@ npm install
 npm i sass
 npm install antd --save
 npm i react-copy-to-clipboard
+npm install react-icons --save
 
 para correr el proyecto -> npm run dev
 URL de github para gestión de versiones: https://github.com/martinval20/prueba1-frontend
