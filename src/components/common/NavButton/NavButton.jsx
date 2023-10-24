@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function NavButton(props) {
   return (
     <div className="btn-nav">
@@ -17,6 +18,7 @@ export default function NavButton(props) {
         onClick={() => props.setPage(2)}
       >
         Siguiente &gt;
+        
       </button>
     </div>
   );
