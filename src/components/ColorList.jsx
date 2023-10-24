@@ -39,7 +39,7 @@ function ColorList() {
               >
                 <p className="year">{colors.year} </p>
                 <p className="colorName">{colors.name}</p>
-                <p className="colorCode">{colors.color} </p>
+                <p className="colorCode">{colors.color} </p>                
                 <p className="colorPatone">{colors.pantone_value}</p>
               </div>
             </CopyToClipboard>

@@ -11,4 +11,4 @@ npm i react-copy-to-clipboard
 para correr el proyecto -> npm run dev
 URL de github para gestión de versiones: https://github.com/martinval20/prueba1-frontend
 Deplegado en Netlify
-Link: https://653705a2c94821708253e1d6--whimsical-conkies-2a241c.netlify.app
+Link: https://65372d8e9dfe2e00084bc65e--whimsical-conkies-2a241c.netlify.app
